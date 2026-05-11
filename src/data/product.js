@@ -1,13 +1,3 @@
-import dreame_l20ultra from "../assets/dreame_l20.png";
-import dreame_l10s from "../assets/dreame_l10s-ultra.png";
-import xiaomi_purifier4 from "../assets/xiaomi_purifier4.png";
-import ddpai_z50 from "../assets/ddpai_z50-4k.png";
-import wanbo_t2max from "../assets/wanbo_t2max.png";
-import uwant_b100 from "../assets/uwant_b100.png";
-import toptoy_naruto from "../assets/toptoy_naruto-blindbox.png";
-import amazfit_cheetah2pro from "../assets/amazfit_cheetah2pro.png";
-import amazfit_active3 from "../assets/amazfit_active3.png";
-
 const products = {
   Dreame: [
     {
@@ -15,7 +5,7 @@ const products = {
       name: "Dreame L20 Ultra Robot Vacuum",
       category: "Cleaning Devices",
       price: 39999,
-      image: dreame_l20ultra,
+      image: "../public/assets/products/dreame_l20.png",
       description: "Advanced cleaning with ultra power and smart mapping.",
       stock: 8,
       rating: 4.9,
@@ -25,7 +15,7 @@ const products = {
       name: "Dreame Bot L10s Ultra",
       category: "Robot Vacuum",
       price: 32999,
-      image: dreame_l10s,
+      image: "../public/assets/products/dreame_l10s-ultra.png",
       description: "Automatic robot vacuum with self-cleaning station.",
       stock: 5,
       rating: 4.8,
@@ -38,7 +28,7 @@ const products = {
       name: "Xiaomi Smart Air Purifier 4",
       category: "Smart Home",
       price: 8999,
-      image: xiaomi_purifier4,
+      image: "../public/assets/products/xiaomi_purifier4.png",
       description: "Smart purification for cleaner and healthier air.",
       stock: 15,
       rating: 4.8,
@@ -48,7 +38,7 @@ const products = {
     //   name: "Xiaomi Pad 6",
     //   category: "Tablet",
     //   price: 22999,
-    //   image: "/src/assets/xiaomi_pad6.png",
+    //   image: "../public/assets/products/xiaomi_pad6.png",
     //   description: "High-performance tablet for work and entertainment.",
     //   stock: 10,
     //   rating: 4.7,
@@ -61,7 +51,7 @@ const products = {
       name: "DDPAI Z50 4K Dashcam",
       category: "Car Tech",
       price: 6499,
-      image: ddpai_z50,
+      image: "../public/assets/products/ddpai_z50-4k.png",
       description: "4K UHD recording with smart features for safer driving.",
       stock: 12,
       rating: 4.5,
@@ -71,7 +61,7 @@ const products = {
     //   name: "DDPAI Z50 Dual",
     //   category: "Dash Camera",
     //   price: 8999,
-    //   image: "/src/assets/ddpai_z50-4k.png",
+    //   image: "../public/assets/products/ddpai_z50-4k.png",
     //   description: "4K dual-channel dash camera for vehicles.",
     //   stock: 7,
     //   rating: 4.8,
@@ -84,7 +74,7 @@ const products = {
       name: "Wanbo T2 Max Smart Projector",
       category: "Smart Home",
       price: 10999,
-      image: wanbo_t2max,
+      image: "../public/assets/products/wanbo_t2max.png",
       description: "Enjoy cinema experience at home in full HD clarity.",
       stock: 12,
       rating: 4.6,
@@ -97,7 +87,7 @@ const products = {
       name: "UWANT B100 Wet and Dry Vacuum Cleaner",
       category: "Cleaning Devices",
       price: 17999,
-      image: uwant_b100,
+      image: "../public/assets/products/uwant_b100.png",
       description: "Delivers a deep and effective clean using powerful water pressure and brush scrubbing to lift dirt, stains, and embedded debris from surfaces.",
       stock: 9,
       rating: 4.7,
@@ -107,7 +97,7 @@ const products = {
     //   name: "Uwant V100 Vacuum Cleaner",
     //   category: "Vacuum Cleaner",
     //   price: 8999,
-    //   image: "/src/assets/uwant-v100.jpg",
+    //   image: "../public/assets/products/uwant-v100.jpg",
     //   description: "Cordless vacuum cleaner with strong suction.",
     //   stock: 11,
     //   rating: 4.6,
@@ -120,7 +110,7 @@ const products = {
       name: "TOPTOY NARUTO Shippuden Beast Plush Series Keychain Blind Box",
       category: "Collectibles",
       price: 1899,
-      image: toptoy_naruto,
+      image: "../public/assets/products/toptoy_naruto-blindbox.png",
       description: "Collect adorable beast-themed plush keychains inspired by Naruto: Shippuden.",
       stock: 30,
       rating: 4.9,
@@ -130,7 +120,7 @@ const products = {
     //   name: "TOPTOY One Piece Figure",
     //   category: "Anime Figure",
     //   price: 2499,
-    //   image: "/src/assets/toptoy_onepiece.jpg",
+    //   image: "../public/assets/products/toptoy_onepiece.jpg",
     //   description: "Detailed One Piece collectible figure.",
     //   stock: 14,
     //   rating: 4.8,
@@ -143,7 +133,7 @@ const products = {
       name: "Amazfit Cheetah 2 Pro",
       category: "Smart Home",
       price: 27999,
-      image: amazfit_cheetah2pro,
+      image: "../public/assets/products/amazfit_cheetah2pro.png",
       description: "Smart watch that supports more than just miles and splits, bringing together the strength, recovery, and discipline that drive performance.",
       stock: 20,
       rating: 4.7,
@@ -153,7 +143,7 @@ const products = {
       name: "Amazfit Active 3 Premium",
       category: "Smart Home",
       price: 10299,
-      image: amazfit_active3,
+      image: "../public/assets/products/amazfit_active3.png",
       description: "Smartwatch that  helps you move forward by training smarter, building a stronger foundation, and trusting the process that leads to results.",
       stock: 25,
       rating: 4.6,
