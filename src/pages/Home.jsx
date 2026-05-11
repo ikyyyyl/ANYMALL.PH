@@ -8,6 +8,8 @@ import ddpai from "../assets/ddpai.png";
 import uwant from "../assets/uwant.png";
 import toptoy from "../assets/toptoy.png";
 import wanbo from "../assets/wanbo.png";
+import mibro from "../assets/mibro.png";
+import vinko from "../assets/vinko.png";
 
 function Home() {
   return (
@@ -47,10 +49,12 @@ function Home() {
             { name: "Xiaomi", image: xiaomi, link: "https://www.mi.com/ph/store/" },
             { name: "Dreame", image: dreame, link: "https://ph.dreametech.com/" },
             { name: "Amazfit", image: amazfit, link: "https://us.amazfit.com/" },
-            { name: "DDPai", image: ddpai, link: "https://ph.ddpai.com/" },
+            { name: "DDPAI", image: ddpai, link: "https://ph.ddpai.com/" },
             { name: "Uwant", image: uwant, link: "https://uwant.com.ph/" },
             { name: "TopToy", image: toptoy, link: "https://gotoptoy.com/" },
             { name: "Wanbo", image: wanbo, link: "https://wanbo.cn/" },
+            { name: "Mibro", image: mibro, link: "https://www.mibrofit.com/" },
+            { name: "Vinko", image: vinko, link: "https://www.facebook.com/vinkophofficial/" }
           ].map((brand) => (
               <a
                 key={brand.name}

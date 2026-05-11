@@ -95,39 +95,6 @@ function Navbar() {
           <Link to="/products" className={getButtonClasses("/products")}>
             PRODUCTS
           </Link>
-
-          {/* DROPDOWN */}
-          <div className="absolute left-3 mt-6 w-40 bg-white border border-gray-300 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            {/* arrow pointer */}
-            <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white rotate-45 border-t border-l border-gray-300 "></div>
-            <Link
-              to="/cleaning"
-              className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-            >
-              Cleaning Devices
-            </Link>
-
-            <Link
-              to="/smart-home"
-              className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-            >
-              Smart Home
-            </Link>
-
-            <Link
-              to="/car-tech"
-              className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-            >
-              Car Tech
-            </Link>
-
-            <Link
-              to="/kitchen"
-              className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-            >
-              Kitchen Appliances
-            </Link>
-          </div>
         </li>
 
         <li>

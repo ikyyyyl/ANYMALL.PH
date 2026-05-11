@@ -19,9 +19,8 @@ function Contact() {
             <div className="border rounded-lg p-5 bg-white shadow-sm hover:shadow-xl transition">
                 <h2 className="font-bold text-gray-800">Email</h2>
                 <p className="text-sm text-gray-600 mt-2">
-                    For general inquiries, please email us at 
-                    <a href="mailto:info@anymall.com" className="text-teal-500 hover:underline">
-                        info@anymall.com
+                    For general inquiries, please email us at  
+                    <a href="mailto:info@anymall.com" className="text-teal-500 hover:underline">  info@anymall.com
                     </a>
                 </p>
             </div>

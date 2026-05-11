@@ -58,14 +58,16 @@ function About() {
             <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed space-y-3">
               <p>
                 <span className="font-semibold text-gray-800">Mission:</span>{" "}
-                To provide high-quality smart appliances that improve everyday
-                living through innovation, reliability, and affordability.
+                We aim to provide products and services combined
+                with exceptional customer buying experience.
+
               </p>
 
               <p>
                 <span className="font-semibold text-gray-800">Vision:</span>{" "}
-                To become a leading smart appliance distributor in Southeast
-                Asia, empowering homes with intelligent technology solutions.
+                We will be a catalyst for
+                providing world-class products
+                and services in the Philippines
               </p>
             </div>
           )}
