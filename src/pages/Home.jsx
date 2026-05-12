@@ -53,19 +53,18 @@ function Home() {
 
         <div className="flex gap-4 justify-center flex-wrap">
           {[
-            { name: "Xiaomi", image: xiaomi, link: "https://www.mi.com/ph/store/" },
-            { name: "Dreame", image: dreame, link: "https://ph.dreametech.com/" },
-            { name: "Amazfit", image: amazfit, link: "https://us.amazfit.com/" },
-            { name: "DDPAI", image: ddpai, link: "https://ph.ddpai.com/" },
-            { name: "Uwant", image: uwant, link: "https://uwant.com.ph/" },
-            { name: "TopToy", image: toptoy, link: "https://gotoptoy.com/" },
-            { name: "Wanbo", image: wanbo, link: "https://wanbo.cn/" },
-            { name: "Mibro", image: mibro, link: "https://www.mibrofit.com/" },
-            { name: "Vinko", image: vinko, link: "https://www.facebook.com/vinkophofficial/" }
+            { name: "Xiaomi", image: xiaomi },
+            { name: "Dreame", image: dreame },
+            { name: "Amazfit", image: amazfit },
+            { name: "DDPAI", image: ddpai },
+            { name: "Uwant", image: uwant },
+            { name: "TopToy", image: toptoy },
+            { name: "Wanbo", image: wanbo },
+            { name: "Mibro", image: mibro },
+            { name: "Vinko", image: vinko }
           ].map((brand) => (
               <a
                 key={brand.name}
-                href={brand.link || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white w-50 h-20 px-6 py-3 shadow rounded-md flex items-center justify-center border border-gray-500 hover:shadow-lg transition"
