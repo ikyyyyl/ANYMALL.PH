@@ -33,16 +33,16 @@ const products = {
       stock: 15,
       rating: 4.8,
     },
-    // {
-    //   id: 2,
-    //   name: "Xiaomi Pad 6",
-    //   category: "Tablet",
-    //   price: 22999,
-    //   image: "/assets/products/xiaomi_pad6.png",
-    //   description: "High-performance tablet for work and entertainment.",
-    //   stock: 10,
-    //   rating: 4.7,
-    // },
+    {
+      id: 2,
+      name: "Xiaomi Pad 6",
+      category: "Tablet",
+      price: 21999,
+      image: "/assets/products/xiaomi_pad6.png",
+      description: "High-performance tablet for work and entertainment.",
+      stock: 10,
+      rating: 4.7,
+    },
   ],
 
   DDPAI: [

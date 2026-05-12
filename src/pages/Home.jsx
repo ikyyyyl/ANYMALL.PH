@@ -1,6 +1,7 @@
 import products from "../data/product";
 
 import hero from "../assets/hero-image.png";
+import { useNavigate } from 'react-router-dom';
 import xiaomi from "../assets/xiaomi.png";
 import dreame from "../assets/dreame.png";
 import amazfit from "../assets/amazfit.png";
@@ -12,6 +13,12 @@ import mibro from "../assets/mibro.png";
 import vinko from "../assets/vinko.png";
 
 function Home() {
+  const navigate = useNavigate();
+
+  const goToProduct = () => {
+    navigate('/Products');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-teal-50">
 
@@ -27,7 +34,7 @@ function Home() {
             Your trusted warehouse for top smart appliances brands.
           </p>
 
-          <button className="mt-6 bg-teal-500 text-white text-sm font-bold px-4 py-1 rounded hover:bg-gray-400 transition">
+          <button onClick={goToProduct} className="mt-6 bg-teal-500 text-white text-sm font-bold px-4 py-1 rounded hover:bg-gray-400 transition">
             BROWSE PRODUCTS
           </button>
         </div>
