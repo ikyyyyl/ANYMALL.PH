@@ -54,8 +54,9 @@ function Contact() {
 
           {/* EMAIL */}
           <div className="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <h2 className="text-lg font-bold text-teal-600 mb-3">
-              📧 Email Support
+            <h2 className="text-lg font-bold text-teal-600 mb-3 flex items-center">
+              <i className="fa fa-envelope mr-3" aria-hidden="true"></i>
+              Email Support
             </h2>
 
             <div className="space-y-2 text-sm text-gray-600">
@@ -66,16 +67,18 @@ function Contact() {
 
           {/* PHONE */}
           <div className="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <h2 className="text-lg font-bold text-teal-600 mb-3">
-              📞 Hotline
+            <h2 className="text-lg font-bold text-teal-600 mb-3 flex items-center">
+              <i className="fa fa-phone mr-3" aria-hidden="true"></i>
+              Hotline
             </h2>
             <p className="text-gray-700 text-sm">02-8655-7686</p>
           </div>
 
           {/* HOURS */}
           <div className="border rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-            <h2 className="text-lg font-bold text-teal-600 mb-3">
-              ⏱ Support Hours
+            <h2 className="text-lg font-bold text-teal-600 mb-3 flex items-center">
+              <i className="fa fa-clock mr-3" aria-hidden="true"></i>
+              Support Hours
             </h2>
             <p className="text-sm text-gray-600">
               Mon – Fri: 8:00 AM – 5:00 PM <br />

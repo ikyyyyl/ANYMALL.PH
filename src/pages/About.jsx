@@ -9,25 +9,25 @@ function About() {
       title: "Trusted Global Brands",
       description:
         "We partner with internationally recognized smart appliance and technology brands.",
-      icon: "🌍",
+      icon: "fa-solid fa-globe",
     },
     {
       title: "Nationwide Distribution",
       description:
         "Efficient warehouse operations and logistics support across the Philippines.",
-      icon: "🚚",
+      icon: "fa-solid fa-truck",
     },
     {
       title: "Smart Living Solutions",
       description:
         "Innovative products designed to improve convenience, comfort, and lifestyle.",
-      icon: "🏠",
+      icon: "fa-solid fa-house",
     },
     {
       title: "Reliable Customer Support",
       description:
         "Dedicated assistance before, during, and after every purchase.",
-      icon: "💬",
+      icon: "fa-solid fa-comments",
     },
   ];
 
@@ -197,15 +197,15 @@ function About() {
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300"
               >
-                <div className="text-5xl mb-5">
-                  {feature.icon}
+                <div className="text-4xl mb-5 flex justify-center items-center">
+                  <i className={`${feature.icon} block`} aria-hidden="true"></i>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 justify-center items-center text-center">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed text-sm">
+                <p className="text-gray-600 leading-relaxed text-sm justify-center items-center text-center">
                   {feature.description}
                 </p>
               </div>

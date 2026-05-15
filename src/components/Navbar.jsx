@@ -1,9 +1,11 @@
 import React from "react";
 import anymall from "../assets/anymall.png";
 import { Link, useLocation } from "react-router-dom";
+import { useSearch } from "../components/SearchContext";
 
 function Navbar() {
   const location = useLocation();
+  const { searchTerm, setSearchTerm } = useSearch();
 
   const getButtonClasses = (path) => {
     const base = "px-6 py-1 rounded-md transition";
@@ -57,11 +59,13 @@ function Navbar() {
 
         <li>
           <div className="flex items-center gap-3">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="px-3 py-1 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-300"
-            />
+    <input
+      type="text"
+      placeholder="Search..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="px-3 py-1 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-300"
+    />
 
             <button
               aria-label="favorites"

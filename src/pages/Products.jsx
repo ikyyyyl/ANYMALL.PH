@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import productsData from "../data/product";
+import { useSearch } from "../components/SearchContext";
 
 function Products() {
   const navigate = useNavigate();
+  const { searchTerm } = useSearch();
 
   const allProducts = Object.entries(productsData).flatMap(
     ([brand, items]) =>
@@ -23,17 +25,22 @@ function Products() {
 
   const brands = ["All", ...Object.keys(productsData)];
 
-  const filteredProducts = allProducts.filter((product) => {
-    const categoryMatch =
-      selectedCategory === "All" ||
-      product.category === selectedCategory;
+const filteredProducts = allProducts.filter((product) => {
+  const categoryMatch =
+    selectedCategory === "All" ||
+    product.category === selectedCategory;
 
-    const brandMatch =
-      selectedBrand === "All" ||
-      product.brand === selectedBrand;
+  const brandMatch =
+    selectedBrand === "All" ||
+    product.brand === selectedBrand;
 
-    return categoryMatch && brandMatch;
-  });
+  const searchMatch =
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.brand.toLowerCase().includes(searchTerm.toLowerCase());
+
+  return categoryMatch && brandMatch && searchMatch;
+});
 
   return (
     <div className="bg-gray-50 min-h-screen">
