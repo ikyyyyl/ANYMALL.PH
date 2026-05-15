@@ -70,12 +70,6 @@ function Navbar() {
               <i className="fas fa-heart"></i>
             </button>
 
-            <button
-              aria-label="cart"
-              className="p-2 text-2xl text-gray-600 hover:text-teal-500 transition"
-            >
-              <i className="fas fa-shopping-cart"></i>
-            </button>
           </div>
         </li>
       </ul>

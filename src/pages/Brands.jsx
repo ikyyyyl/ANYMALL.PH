@@ -8,121 +8,208 @@ import wanbo from "../assets/wanbo.png";
 import mibro from "../assets/mibro.png";
 import vinko from "../assets/vinko.png";
 
-import { Link } from "react-router-dom";
-
 function Brands() {
   const brands = [
     {
       name: "Xiaomi",
       img: xiaomi,
-      exposure: 100,
       href: "https://www.mi.com/ph/store/",
-      desc: "Innovative smart devices and lifestyle electronics known for quality and affordability.",
+      desc: "Smart devices and lifestyle electronics built for modern living.",
     },
     {
       name: "Dreame",
       img: dreame,
-      exposure: 95,
       href: "https://ph.dreametech.com/",
-      desc: "Advanced cleaning technology including smart robot vacuums and cordless cleaners.",
+      desc: "Advanced cleaning technology and intelligent home solutions.",
     },
     {
       name: "Amazfit",
       img: amazfit,
-      exposure: 105,
       href: "https://us.amazfit.com/",
-      desc: "Smart wearables focused on fitness tracking, health monitoring, and daily performance.",
+      desc: "Smart wearables focused on health, fitness, and performance.",
     },
     {
       name: "DDPAI",
       img: ddpai,
-      exposure: 100,
       href: "https://ph.ddpai.com/",
-      desc: "High-quality dash cameras and driving recorders designed for safety and reliability.",
+      desc: "High-quality dash cams for safe and smart driving.",
     },
     {
       name: "Uwant",
       img: uwant,
-      exposure: 98,
       href: "https://uwant.com.ph/",
-      desc: "Smart home cleaning appliances built for convenience and efficient household care.",
+      desc: "Smart cleaning appliances for effortless home care.",
     },
     {
       name: "TopToy",
       img: toptoy,
-      exposure: 110,
       href: "https://gotoptoy.com/",
-      desc: "Creative collectible toys blending pop culture, design, and modern craftsmanship.",
+      desc: "Collectible designer toys inspired by pop culture.",
     },
     {
       name: "Wanbo",
       img: wanbo,
-      exposure: 103,
       href: "https://wanbo.cn/",
-      desc: "Portable projectors offering home entertainment with clear visuals and smart features.",
+      desc: "Portable projectors for immersive home entertainment.",
     },
     {
       name: "Mibro",
       img: mibro,
-      exposure: 100,
       href: "https://www.mibrofit.com/",
-      desc: "Smartwatches and fitness trackers that combine style, functionality, and health insights.",
+      desc: "Affordable smartwatches for fitness and daily tracking.",
     },
     {
       name: "Vinko",
       img: vinko,
-      exposure: 97,
       href: "https://www.facebook.com/vinkophofficial/",
-      desc: "Smart home appliances and lifestyle products designed for modern living and convenience.",
-    }
+      desc: "Smart home appliances designed for everyday convenience.",
+    },
   ];
 
   return (
-    <div className="p-10">
-      <h1 className="text-4xl font-bold text-teal-500">
-        OUR BRANDS
-      </h1>
+    <div className="bg-gray-50 min-h-screen">
 
-      <p className="mt-3 text-gray-600 max-w-6xl">
-        ANYMALL collaborates with globally trusted smart appliance brands
-        to bring innovation, convenience, and quality directly to you.
-      </p>
+      {/* HERO SECTION */}
+      <section className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-20">
 
-      {/* BRAND GRID */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {brands.map((brand) => (
-          <div
-            key={brand.name}
-            className="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm 
-            hover:shadow-xl hover:-translate-y-1 hover:border-teal-400 
-            transition-all duration-300 cursor-pointer"
-          >
-            <div className="w-full h-40 mb-4 flex items-center justify-center overflow-hidden rounded">
-              <img
-                src={brand.img}
-                alt={brand.name}
-                className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
-                style={{ filter: `brightness(${brand.exposure}%)` }}
-              />
-            </div>
+          <p className="uppercase tracking-[4px] text-sm text-teal-100 mb-4">
+            Brand Ecosystem
+          </p>
 
-            <h2 className="text-xl font-bold text-gray-800 group-hover:text-teal-500">
-              {brand.name}
-            </h2>
+          <h1 className="text-5xl font-bold leading-tight mb-6">
+            Trusted Global Brands, One Platform
+          </h1>
 
-            <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-              {brand.desc}
+          <p className="text-teal-50 max-w-2xl text-lg leading-relaxed">
+            ANYMALL partners with leading global technology brands to bring
+            innovative, high-quality, and affordable smart products to
+            Filipino consumers.
+          </p>
+
+        </div>
+      </section>
+
+      {/* FEATURE STRIP */}
+      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <h3 className="font-bold text-teal-600 mb-2">Verified Partners</h3>
+          <p className="text-sm text-gray-600">
+            All brands are officially distributed and trusted.
+          </p>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <h3 className="font-bold text-teal-600 mb-2">Smart Technology</h3>
+          <p className="text-sm text-gray-600">
+            Focus on innovation, automation, and smart living.
+          </p>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border">
+          <h3 className="font-bold text-teal-600 mb-2">Nationwide Supply</h3>
+          <p className="text-sm text-gray-600">
+            Powered by efficient warehouse distribution.
+          </p>
+        </div>
+
+      </section>
+
+      {/* FEATURED BRAND (HIGHLIGHT) */}
+      <section className="max-w-7xl mx-auto px-6 pb-10">
+
+        <div className="bg-white rounded-3xl shadow-md border overflow-hidden grid md:grid-cols-2">
+
+          <div className="p-10 flex flex-col justify-center">
+            <p className="text-teal-500 font-semibold uppercase tracking-[3px] mb-3">
+              Featured Brand
             </p>
 
-            <Link
-              to={brand.href}
-              className="mt-4 inline-block text-teal-500 text-sm font-semibold opacity-80"
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              Xiaomi
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              From smartphones to smart home devices and appliances, Xiaomi leads in
+              delivering innovative and affordable technology for modern
+              lifestyles.
+            </p>
+
+            <a
+              href="https://www.mi.com/ph/store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold w-fit hover:bg-teal-500 transition"
             >
-              Explore products →
-            </Link>
+              Explore Mi Online Mall
+            </a>
           </div>
-        ))}
-      </div>
+
+          <div className="bg-gray-100 flex items-center justify-center p-10">
+            <img
+              src={xiaomi}
+              alt="Xiaomi"
+              className="w-60 object-contain"
+            />
+          </div>
+
+        </div>
+      </section>
+
+      {/* BRAND GRID */}
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800">
+              All Partner Brands
+            </h2>
+            <p className="text-gray-500 text-sm mt-1">
+              Explore our full ecosystem of global partners
+            </p>
+          </div>
+
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {brands.map((brand) => (
+            <a
+              key={brand.name}
+              href={brand.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white border rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition"
+            >
+
+              <div className="h-28 flex items-center justify-center mb-5">
+                <img
+                  src={brand.img}
+                  alt={brand.name}
+                  className="h-20 object-contain group-hover:scale-105 transition"
+                />
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-800 group-hover:text-teal-600">
+                {brand.name}
+              </h3>
+
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                {brand.desc}
+              </p>
+
+              <p className="mt-4 text-sm text-teal-600 font-semibold">
+                Visit Brand →
+              </p>
+
+            </a>
+          ))}
+
+        </div>
+      </section>
+
     </div>
   );
 }

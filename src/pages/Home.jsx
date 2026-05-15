@@ -84,10 +84,10 @@ function Home() {
 
         <div className="flex gap-4 justify-center flex-wrap">
           {[
-            { name: "Cleaning Devices", icon: <i class="fas fa-broom" />, description: "Robot vacuums, cordless vacuums, and more." },
-            { name: "Smart Home", icon: <i class="fas fa-home" />, description: "Cameras, sensors, smart hubs and more." },
-            { name: "Car Tech", icon: <i class="fas fa-car" />, description: "Dashcams, car accessories, and smart gadgets." },
-            { name: "Kitchen Appliances", icon: <i class="fas fa-kitchen-set" />, description: "Rice cookers, kettles, air fryer, and more." },
+            { name: "Cleaning Devices", icon: <i className="fas fa-broom" />, description: "Robot vacuums, cordless vacuums, and more." },
+            { name: "Smart Home", icon: <i className="fas fa-home" />, description: "Cameras, sensors, smart hubs and more." },
+            { name: "Car Tech", icon: <i className="fas fa-car" />, description: "Dashcams, car accessories, and smart gadgets." },
+            { name: "Kitchen Appliances", icon: <i className="fas fa-kitchen-set" />, description: "Rice cookers, kettles, air fryer, and more." },
           ].map((category) => (
             <div
               key={category.name}
@@ -100,7 +100,10 @@ function Home() {
               <div className="flex-1 flex flex-col items-start gap-1">
                 <p className="font-semibold text-left">{category.name}</p>
                 <p className="text-xs text-gray-500 text-left">{category.description}</p>
-                <button className="w-17 text-teal-500 text-xs font-bold py-1 rounded hover:text-gray-400 transition">
+                <button
+                  onClick={() => navigate('/Products', { state: { category: category.name } })}
+                  className="w-17 text-teal-500 text-xs font-bold py-1 rounded hover:text-gray-400 transition"
+                >
                   SHOP NOW
                 </button>
               </div>
@@ -131,7 +134,10 @@ function Home() {
                   <p className="font-semibold text-center">{product.name}</p>
                   <p className="text-xs text-gray-500 text-center">{product.description}</p>
                   <p className="text-lg text-green-600 text-center font-bold py-2">₱ {product.price.toLocaleString()}</p>
-                  <button className="w-30 text-teal-500 text-sm font-bold rounded hover:text-gray-400 transition">
+                  <button
+                    onClick={() => navigate('/Products', { state: { product } })}
+                    className="w-30 text-teal-500 text-sm font-bold rounded hover:text-gray-400 transition"
+                  >
                     View Details
                   </button>
                 </div>
