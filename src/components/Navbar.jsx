@@ -35,61 +35,7 @@ function Navbar() {
   <Link to="/brands" className={getButtonClasses("/brands")}>
     BRANDS
   </Link>
-
-  {/* DROPDOWN */}
-  <div className="absolute left-3 mt-6 w-40 bg-white border border-gray-300 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-    {/* arrow pointer */}
-    <div className="absolute -top-1.5 left-6 w-3 h-3 bg-white rotate-45 border-t border-l border-gray-300 "></div>
-    <Link
-      to="https://www.mi.com/ph/store/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      Xiaomi
-    </Link>
-
-    <Link
-      to="https://ph.dreametech.com/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      Dreame
-    </Link>
-
-    <Link
-      to="https://us.amazfit.com/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      Amazfit
-    </Link>
-
-    <Link
-      to="https://ph.ddpai.com/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      DDPAI
-    </Link>
-
-    <Link
-      to="https://uwant.com.ph/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      Uwant
-    </Link>
-
-    <Link
-      to="https://gotoptoy.com/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      TopToy
-    </Link>
-
-        <Link
-      to="https://wanbo.cn/"
-      className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100 transition"
-    >
-      Wanbo
-    </Link>
-  </div>
-</li>
+  </li>
 
         <li className="relative group">
           <Link to="/products" className={getButtonClasses("/products")}>

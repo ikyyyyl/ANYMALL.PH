@@ -9,6 +9,7 @@ import Kitchen from "./pages/KitchenAppliances";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import ProductDetails from "./pages/ProductDetails.";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/kitchen" element={<Kitchen />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/product/:brand/:id" element={<ProductDetails />} />
       </Routes>
 
       <Footer />

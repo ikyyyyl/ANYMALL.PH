@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import productsData from "../data/product";
 
 function Products() {
+  const navigate = useNavigate();
 
   // CONVERT OBJECT DATA INTO ARRAY
   const allProducts = Object.entries(productsData).flatMap(
@@ -157,24 +159,19 @@ function Products() {
                 </p>
 
                 {/* PRICE */}
-                <p className="mt-4 text-2xl font-bold text-green-600">
+                <p className="mt-4 text-2xl font-bold text-green-600 text-center">
                   ₱ {product.price.toLocaleString()}
                 </p>
 
-                {/* RATING + STOCK */}
-                <div className="mt-2 flex justify-between text-sm text-gray-500">
-                  <span>⭐ {product.rating}</span>
-                  <span>{product.stock} stocks</span>
-                </div>
-
                 {/* CTA */}
-                <button
-                  className="mt-5 w-full bg-teal-500 hover:bg-teal-600 
-                  text-white font-semibold py-2 rounded-lg transition"
-                >
-                  View Details
-                </button>
-
+              <button
+                onClick={() =>
+                navigate(`/product/${product.brand}/${product.id}`)
+                }
+                className="mt-5 w-full bg-teal-500 hover:bg-teal-600 
+                text-white font-semibold py-2 rounded-lg transition">
+                View Details
+              </button>
               </div>
             ))}
 
