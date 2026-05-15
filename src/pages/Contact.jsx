@@ -54,7 +54,7 @@ function Contact() {
               </a>
             </p>
             <p className="text-gray-700">
-              <span className="font-semibold">Phone:</span>
+              <span className="font-semibold">Telephone Number:</span>
               <a href="tel:+15551234567" className="text-teal-500 hover:underline ml-2">
                 0286557686
               </a>

@@ -132,11 +132,7 @@ function Products() {
               >
 
                 {/* PRODUCT IMAGE */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-52 object-contain mb-4"
-                />
+                <img src={product.images[0]} alt={product.name} className="w-full h-52 object-contain mb-4" />
 
                 {/* BRAND */}
                 <span className="text-xs font-semibold text-teal-500">

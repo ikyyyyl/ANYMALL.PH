@@ -1,6 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import productsData from "../data/product";
+import laz from "../assets/lazada.png";
+import shopee from "../assets/shopee.png";
 
 function ProductDetails() {
   const { brand, id } = useParams();
@@ -29,13 +31,22 @@ function ProductDetails() {
 
       {/* BREADCRUMB */}
       <div className="flex flex-wrap items-center gap-3 text-gray-500 text-sm mb-8">
-        <span>Home</span>
+        <Link to="/" className="hover:text-teal-500 transition-colors">
+          Home
+        </Link>
         <span>{">"}</span>
 
-        <span>Products</span>
+        <Link to="/products" className="hover:text-teal-500 transition-colors">
+          Products
+        </Link>
         <span>{">"}</span>
 
-        <span>{product.category}</span>
+        <Link
+          to={`/products?category=${encodeURIComponent(product.category)}`}
+          className="hover:text-teal-500 transition-colors"
+        >
+          {product.category}
+        </Link>
         <span>{">"}</span>
 
         <span className="text-teal-500 font-semibold">
@@ -214,7 +225,7 @@ function ProductDetails() {
               <div className="flex items-center gap-4">
 
                 <div className="w-14 h-14 rounded-full border flex items-center justify-center text-2xl">
-                  🌐
+                  <i className="fas fa-globe text-teal-500"></i>
                 </div>
 
                 <div>
@@ -240,8 +251,8 @@ function ProductDetails() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-full bg-orange-500 text-white flex items-center justify-center text-xl font-bold">
-                  S
+                <div className="w-14 h-14 rounded-full border flex items-center justify-center">
+                  <img src={shopee} alt="Shopee" className="w-10 h-10" />
                 </div>
 
                 <div>
@@ -267,8 +278,8 @@ function ProductDetails() {
 
               <div className="flex items-center gap-4">
 
-                <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold">
-                  Laz
+                <div className="w-14 h-14 rounded-full border flex items-center justify-center">
+                  <img src={laz} className="w-10 h-10" />
                 </div>
 
                 <div>
@@ -356,7 +367,9 @@ function ProductDetails() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
 
                 <div className="text-center">
-                  <div className="text-5xl mb-3">⚡</div>
+                  <div className="w-14 h-14 mx-auto mb-3 rounded-full border flex items-center justify-center text-2xl text-teal-500">
+                    <i className="fas fa-bolt"></i>
+                  </div>
 
                   <h3 className="font-bold text-gray-800">
                     Powerful
@@ -368,7 +381,9 @@ function ProductDetails() {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-5xl mb-3">🧠</div>
+                  <div className="w-14 h-14 mx-auto mb-3 rounded-full border flex items-center justify-center text-2xl text-teal-500">
+                    <i className="fas fa-brain"></i>
+                  </div>
 
                   <h3 className="font-bold text-gray-800">
                     Smart AI
@@ -380,7 +395,9 @@ function ProductDetails() {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-5xl mb-3">🧼</div>
+                  <div className="w-14 h-14 mx-auto mb-3 rounded-full border flex items-center justify-center text-2xl text-teal-500">
+                    <i className="fas fa-broom"></i>
+                  </div>
 
                   <h3 className="font-bold text-gray-800">
                     Auto Cleaning
@@ -392,7 +409,9 @@ function ProductDetails() {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-5xl mb-3">📍</div>
+                  <div className="w-14 h-14 mx-auto mb-3 rounded-full border flex items-center justify-center text-2xl text-teal-500">
+                    <i className="fas fa-location-dot"></i>
+                  </div>
 
                   <h3 className="font-bold text-gray-800">
                     Smart Mapping
@@ -487,6 +506,22 @@ function ProductDetails() {
                 </span>
 
                 <span>1 Year</span>
+              </div>
+
+              <div className="flex justify-between">
+                <span className="font-semibold text-gray-700">
+                  Suction Power
+                </span>
+
+                <span>19,000Pa</span>
+              </div>
+
+              <div className="flex justify-between">
+                <span className="font-semibold text-gray-700">
+                  Battery Life
+                </span>
+
+                <span>Up to 260 mins</span>
               </div>
 
               <div className="flex justify-between">

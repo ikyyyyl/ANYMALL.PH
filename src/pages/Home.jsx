@@ -124,7 +124,7 @@ function Home() {
                 className="bg-white w-77 px-5 py-5 shadow rounded-md border border-gray-500 hover:shadow-lg transition flex flex-col items-center gap-8"
               >
                 <span className="flex h-55 w-full items-center justify-center shrink-0">
-                  <img src={product.image} alt={product.name} className="h-60 w-60 object-contain" />
+                  <img src={product.images[0]} alt={product.name} className="h-60 w-60 object-contain" />
                 </span>
 
                 <div className="flex w-full flex-col items-center gap-3">
