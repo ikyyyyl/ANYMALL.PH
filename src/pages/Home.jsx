@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import products from "../data/product";
 
 import hero from "../assets/hero-image.png";
@@ -23,8 +24,14 @@ function Home() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-teal-50">
 
       {/* HERO SECTION */}
-      <section className="flex items-center justify-between px-15 py-0 bg-gray-200">
-        <div>
+
+      <motion.section className="flex items-center justify-between px-15 py-0 bg-gray-200"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      >
+        <div className="animate-fade-in">
           <p className="text-teal-500 font-bold">WELCOME TO ANYMALL</p>
           <h1 className="text-5xl font-bold leading-tight">
             Smart Living <br />
@@ -38,16 +45,20 @@ function Home() {
             BROWSE PRODUCTS
           </button>
         </div>
-
-        <img
-          src={hero}
-          className="w-[850px] h-[290px] object-cover"
-          alt="products"
-        />
-      </section>
+<img src={hero} className="w-[850px] h-[290px] object-cover" alt="products" />
+{/* <img
+  src={hero}
+  className="w-[850px] h-[290px] object-cover float-animation"
+  alt="products"
+/> */}
+      </motion.section>
 
       {/* BRANDS */}
-      <section className="px-5 py-5">
+      <motion.section className="px-5 py-5"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}>
         <h2 className="text-center font-semibold mb-1">OUR BRANDS</h2>
         <hr className="mb-8 w-15 mx-auto border-t-3 border-teal-500" />
 
@@ -67,7 +78,7 @@ function Home() {
                 key={brand.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white w-50 h-20 px-6 py-3 shadow rounded-md flex items-center justify-center border border-gray-500 hover:shadow-lg transition"
+                className="bg-white w-50 h-20 px-6 py-3 shadow rounded-xl flex items-center justify-center border border-gray-200 hover:-translate-y-2 hover:shadow-2xl hover:border-teal-400 transition-all duration-300"
               >
                 <img src={brand.image} alt={brand.name} className="h-30 w-30 object-contain" />
                 <span className="sr-only">{brand.name}</span>
@@ -75,10 +86,21 @@ function Home() {
             )
           )}
         </div>
-      </section>
+      </motion.section>
 
+      {/* <motion.section
+  className="px-5 py-5"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+></motion.section> */}
       {/* SHOP BY CATEGORY */}
-      <section className="px-5 py-5">
+      <motion.section className="px-5 py-5"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}>
         <h2 className="text-center font-semibold mb-1">SHOP BY CATEGORY</h2>
         <hr className="mb-8 w-15 mx-auto border-t-3 border-teal-500" />
 
@@ -102,7 +124,7 @@ function Home() {
                 <p className="text-xs text-gray-500 text-left">{category.description}</p>
                 <button
                   onClick={() => navigate('/Products', { state: { category: category.name } })}
-                  className="w-17 text-teal-500 text-xs font-bold py-1 rounded hover:text-gray-400 transition"
+                  className="mt-6 bg-teal-500 text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-teal-600 hover:scale-105 active:scale-95 transition duration-300 shadow-md hover:shadow-xl"
                 >
                   SHOP NOW
                 </button>
@@ -110,7 +132,7 @@ function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
 
       {/* PRODUCTS GRID */}

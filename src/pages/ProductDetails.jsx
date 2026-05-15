@@ -41,14 +41,6 @@ function ProductDetails() {
         </Link>
         <span>{">"}</span>
 
-        <Link
-          to={`/products?category=${encodeURIComponent(product.category)}`}
-          className="hover:text-teal-500 transition-colors"
-        >
-          {product.category}
-        </Link>
-        <span>{">"}</span>
-
         <span className="text-teal-500 font-semibold">
           {product.name}
         </span>
